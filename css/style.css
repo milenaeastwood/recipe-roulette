@@ -1,0 +1,406 @@
+.atma-medium {
+  font-family: 'Atma', system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, sans-serif;
+  color: rgb(25, 29, 21);  
+  font-size: 0.9rem;
+}
+
+
+#content-container {
+  background-color: #ede8dc;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Atma';
+  color: rgb(102, 119, 78);
+}
+
+h3 {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  border-style: solid;
+}
+
+#content-wrapper {
+  position: relative;
+  background-color: #ede8dc;
+}
+
+#content-output {
+  margin-top: 2.5rem;
+  padding: 0 6rem 0 6rem;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  max-height: 6rem;
+  width: 100%;
+  background-color: #cddaaf;
+}
+
+#page-title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-left: 0.4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+#btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover, input:hover {
+  cursor: pointer;
+}
+
+#btn-wrapper button, .area-active button {
+  width: 6.8rem;
+  height: 2.3rem;
+  margin: 0 1rem 0 1rem;
+  padding: 0;
+  font-family: 'Atma';
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(78, 88, 65);
+  background-color: #f3f8e6db;
+  border-radius: 9px;
+  border-color: rgb(132, 146, 113);
+}
+
+
+/* ---------------------- FILTER AREA ---------------------- */
+#filter-area {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+#filter-div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#filter-div label {
+  margin-left: 1rem;
+}
+
+#filter-div select {
+  margin-right: 1rem;
+}
+
+#filter-btn-wrapper {
+  margin: 4rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#filter-btn-wrapper button {
+  width: 8rem;
+  margin: 0 1rem 0 1rem;
+  padding: 0.5rem;
+  font-family: 'Atma';
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(66, 75, 56);
+  background-color: rgb(214, 224, 201);
+  border-radius: 1rem;
+  border-color: rgb(125, 135, 115);
+}
+
+/* ---------------------- RECIPE OUTPUT ---------------------- */
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-rows: 0.7fr 1fr 0.1fr;
+  gap: 0.6rem 3rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'img info-box'
+    'ingredients-box instructions-box'
+    'btns-box btns-box';
+  margin: 1rem 4rem;
+  background-color: #ede8dc;
+}
+
+.recipe-container h3{
+  font-size: 30px;
+}
+
+.recipe-container h4{
+  font-size: 22px;
+  margin: 0 0 0.5rem 0;
+}
+
+.recipe-img {
+  width: 310px;
+  height: 310px;
+  grid-area: img;
+}
+
+.recipe-img img {
+  border-radius: 6px;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'info-title'
+    'info';
+  grid-area: info-box;
+}
+
+.info-title {
+  grid-area: info-title;
+
+}
+
+.info-title h3 {
+  text-align: left;
+}
+
+.infos {
+  grid-area: info;
+}
+
+.ingredients-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'ingredients-title'
+    'ingredients';
+  grid-area: ingredients-box;;
+}
+
+.ingredients-title {
+  grid-area: ingredients-title;
+}
+
+.ingredients {
+  grid-area: ingredients;
+}
+
+.ingredients table {
+  width: 310px;
+}
+
+.ingredients td:nth-of-type(3)  {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.ingredients button {
+  display: block;
+  border: solid 0.1rem rgb(73, 82, 61);
+  border-radius: 4px;
+  padding: 1px 1px 0 1px;
+  background-color: rgb(201, 209, 189);
+}
+
+.ingredients img {
+  height: 14px;
+}
+
+.instructions-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'instructions-title'
+    'instructions';
+  grid-area: instructions-box;
+}
+
+.instructions-title {
+  grid-area: instructions-title;
+}
+
+.instructions {
+  grid-area: instructions;
+}
+
+.instructions ol{
+  padding-left: 1.5rem;
+  margin-top: 0;
+}
+
+.instructions li{
+  margin-bottom: 0.6rem;
+}
+
+.btns-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'btns-wrapper';
+  grid-area: btns-box;
+  align-content: center;
+}
+
+.btns-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ede8dc;
+  border: none;
+  grid-area: btns-wrapper;
+}
+
+.btns-wrapper button {
+  width: 8.7rem;
+  margin: 0 1rem 0 1rem;
+  padding: 0.2rem;
+  font-family: 'Atma';
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(66, 75, 56);
+  background-color: rgb(214, 224, 201);
+  border-radius: 0.6rem;
+  border-color: rgb(125, 135, 115);
+}
+/* ---------------------- SAVED RECIPES & SHOPPING LIST ---------------------- */
+
+#data-output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+#data-output table {
+  width: 80%;
+  margin-top: 2.5rem;
+}
+
+.saved-recipe-title {
+  font-weight: 600;
+}
+
+.saved-recipe-title:hover {
+  cursor: pointer;
+  color: rgb(102, 119, 78);
+}
+
+#data-output .ingredients-table {
+  width: 50%;
+  margin-top: 2.5rem;
+}
+
+#data-output label {
+  margin-left: 1rem;
+}
+
+#recipes-output table td:nth-of-type(2) {
+  margin: 0 10rem;
+}
+
+td button {
+  color: rgb(66, 75, 56);
+  background-color: rgb(214, 224, 201);
+  border-radius: 0.3rem;
+  border-color: rgb(125, 135, 115);
+}
+
+
+/* ---------------------- AREA ACTIVE-PASSIVE ---------------------- */
+
+.area-active {
+  position: fixed;
+  z-index: 100;
+  top: 20%;
+  left:calc(50% - 17.5rem);
+	bottom:0;
+	right:0;
+  padding: 3rem 2rem;
+  background-color: #cddaaff1;
+  width: 35rem;
+  height: 20rem;
+  border-radius: 5px;
+}
+
+.innerwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+
+}
+
+.innerwrap p{
+  margin: 2.5rem 0 0 0;
+  text-align: center;
+}
+
+#rating-wrapper {
+  margin-top: 2rem;
+}
+
+.area-active button {
+  min-width: 5.5rem;
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+}
+
+#save-item {
+  width: 8.9rem;
+}
+
+.area-passive {
+  height: 0px;
+  width: 0px;
+}

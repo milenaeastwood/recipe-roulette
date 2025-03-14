@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script type="module" src="js/app.js"></script>
+    <title>Recipe Roulette</title>
+  </head>
+
+  <body>
+    <div id="content-container">
+
+      <header>
+        <div id="page-title">
+          <h1>Recipe Roulette</h1>
+          <h2>– Your Daily Recipe –</h2>
+        </div>
+        <div id="btn-wrapper">
+          <button class="btn-start">Start</button>
+          <button id="btn-saved-recipes">Saved Recipes</button>
+          <button id="btn-shopping-list">Shopping List</button>
+          <button class="btn-install">Install</button>
+        </div>
+      </header>
+
+      <div id="content-wrapper">
+        <div id="content-output"></div>
+        <div id="db-area" class="area-passive"></div>
+      </div>
+
+    </div>
+  </body>
+</html>
